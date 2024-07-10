@@ -1,0 +1,6 @@
+{
+    "webhook": "",
+    "message": "NEW HIT",
+    "timeout": 20,
+    "remove_proxies": false
+}
