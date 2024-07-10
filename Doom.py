@@ -1,4 +1,4 @@
-"""Doom Checker by khalifa DC: cleanest"""
+"""Doom Checker by DC: cleanest"""
 
 import itertools
 import string
@@ -185,7 +185,7 @@ Colors = _Colors()
 Logger = Logger("logs/log.txt")
 
 
-Logger.log(f"Doomchecker started at {time()}")
+Logger.log(f"DoomChecker started at {time()}")
 
 
 
@@ -196,7 +196,7 @@ def clear():
 clear()
 
 class Pomelo:
-    """DOOM Checker"""
+    """Doom Checker"""
     def __init__(self):
         """Initiate the class"""
         self.endpoint = "https://discord.com/api/v9"
@@ -444,7 +444,7 @@ for name in combos:
 
 
 DOOMCHECKER = Pomelo()
-Logger.log("Doomchecker successfully initiated")
+Logger.log("DoomChecker successfully initiated")
 
 
 def worker():
@@ -453,7 +453,7 @@ def worker():
         
         name = queue.get()
         try:
-            x = Doomchecker.check(name)
+            x = DOOMCHECKER.check(name)
             available, json, status_code = x
         except:
             with lock:
@@ -506,7 +506,7 @@ start_time = time()
 def TITLE_SPINNER():
     Logger.log("Started title spinner thread")
     """Fix for windows 11 console"""
-    TITLE = ["Doomchecker", "Avaible : {WORKS}", "Taken : {TAKEN}", "Requests : {REQUESTS}", "RPS : {RPS}", "Elapsed : {ELAPSED}s"]
+    TITLE = ["DOOMCHECKER", "Avaible : {WORKS}", "Taken : {TAKEN}", "Requests : {REQUESTS}", "RPS : {RPS}", "Elapsed : {ELAPSED}s"]
     while True:
         for i in TITLE:
             edited = i          
@@ -591,7 +591,7 @@ def WEBHOOK_PROCESSOR():
                     msg
                 )
             
-            json = {"content": "\n".join(payload), 'username': 'Doom', 'avatar_url': 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/da/daffc1e9d71ea52c3cc9d9b84718ada167143339_full.jpg'}
+            json = {"content": "\n".join(payload), 'username': 'DOOMCHECKER', 'avatar_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Burning_Yellow_Sunset.jpg/1280px-Burning_Yellow_Sunset.jpg'}
             
             x = DOOMCHECKER.session.post(
                 url=webhook,
@@ -609,7 +609,7 @@ def WEBHOOK_PROCESSOR():
             name = names_diff[0]
             current_time = time()
             hittime = f'<t:{round(current_time)}:T>'
-            json = {"content": message.replace("<name>", name).replace("<time>", str(hittime)).replace("<elapsed>", str(round(current_time - start_time))).replace("<RPS>", str(RPS)), 'username': 'DOOMCHECKER', 'avatar_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Burning_Yellow_Sunset.jpg/1280px-Burning_Yellow_Sunset.jpg'}
+            json = {"content": message.replace("<name>", name).replace("<time>", str(hittime)).replace("<elapsed>", str(round(current_time - start_time))).replace("<RPS>", str(RPS)), 'username': 'DoomChecker', 'avatar_url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Burning_Yellow_Sunset.jpg/1280px-Burning_Yellow_Sunset.jpg'}
             x = DOOMCHECKER.session.post(
                 url=webhook,
                 json=json
